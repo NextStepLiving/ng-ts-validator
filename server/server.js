@@ -9,6 +9,7 @@ var logger = require('morgan');
 var port = process.env.PORT || 8001;
 var four0four = require('./utils/404')();
 var httpProxy = require('http-proxy');
+var serveIndex = require('serve-index');
 
 var proxy = httpProxy.createProxyServer({
     target: 'http://localhost:8080',
@@ -43,7 +44,9 @@ switch (environment){
         break;
     default:
         console.log('** DEV **');
-        app.use(express.static('./app'));
+        app.use(express.static('./app/'));
+        app.use(express.static('./'));
+        app.use('/reports', serveIndex('./reports/'));
 
         app.use(apiProxy);
         // Any invalid calls for templateUrls are under app/* and should return 404

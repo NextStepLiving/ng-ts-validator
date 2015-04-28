@@ -27,7 +27,8 @@ module.exports = function(config) {
 
         jspm: {
             loadFiles: [
-                'app/js/**/*.js'
+                'app/js/**/*.js',
+                'test/**/*-spec.js'
             ]
         },
 
@@ -40,13 +41,28 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
+            //'app/js/**/*.js': ['coverage']
         },
 
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['mocha', 'coverage', 'junit'],
+
+        coverageReporter: {
+            dir: 'reports/coverage',
+            reporters: [
+                { type: 'html', subdir: 'html' },
+                { type: 'lcov', subdir: 'lcov' },
+                { type: 'cobertura', subdir: '.', file: 'cobertura.xml' }
+            ]
+        },
+
+        junitReporter: {
+            outputFile: 'reports/coverage/junit.xml',
+            suit: ''
+        },
 
 
         // web server port
