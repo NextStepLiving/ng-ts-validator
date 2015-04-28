@@ -18,3 +18,35 @@
  - Protractor - e2e testing framework. May put that in a separate project though.
  - tslint - A linter for TypeScript
  - Production Build
+ - Express.js - Used as a development server with proxy
+ 
+ ## Getting started
+ 
+ Assuming you already have NodeJS and npm installed...
+ 
+  ```bash
+  # Install gulp, jspm globally
+  npm install gulp jspm -g
+  
+  # cd into the project root and install node dependencies
+  npm install
+  
+  # then install jspm dependencies
+  jspm install
+  
+  # run gulp to watch typescript files for changes and compile them
+  gulp watch
+  
+  ```
+  
+  In a different terminal window start a static http server with the PROJECT_ROOT/app as the webroot
+  
+  ```bash
+  # python simple http server
+  python -m SimpleHTTPServer 8080
+  
+  # or nodes http-server if you have it installed globally
+  http-server
+  ```
+  
+  Open a browser window at http://localhost:8080, you'll see nothing :)
