@@ -35,7 +35,7 @@
   jspm install
   
   # run gulp to watch typescript files for changes and compile them
-  gulp watch
+  gulp dev
   
   ```
   
