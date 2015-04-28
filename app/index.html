@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JSPM Test</title>
+
+</head>
+<body>
+
+    <script>
+        System.import('js/main').then(function (modules) {
+            modules.Main.run();
+        });
+    </script>
+
+</body>
+</html>
