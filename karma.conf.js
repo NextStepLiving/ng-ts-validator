@@ -22,14 +22,23 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'test/**/*-spec.js'
+
         ],
 
         jspm: {
             loadFiles: [
-                'app/js/**/*.js',
+                'app/jspm_packages/npm/babel-core@5.1.13/browser-polyfill.js',
                 'test/**/*-spec.js'
-            ]
+            ],
+            serveFiles: ['app/js/**/*.js'],
+            config: 'app/config.js',
+            packages: 'app/jspm_packages'
+        },
+
+        proxies: {
+            '/base/jspm_packages/': '/base/app/jspm_packages',
+            '/base/app/ts': '/base/app/js'
+            //'/base/node_modules/karma-babel-preprocessor/node_modules/babel-core/': '/base/node_modules/babel/node_modules/babel-core/'
         },
 
 
@@ -41,14 +50,23 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            //'app/js/**/*.js': ['coverage']
+            'app/js/**/*.js': ['babel'],
+            'test/**/*.js': ['babel']
+        },
+
+        babelPreprocessor: {
+            options: {
+                optional: ['runtime'],
+                sourceMap: 'inline',
+                modules: 'system'
+            }
         },
 
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['mocha', 'coverage', 'junit'],
+        reporters: ['mocha', 'coverage'],
 
         coverageReporter: {
             dir: 'reports/coverage',
@@ -58,12 +76,6 @@ module.exports = function(config) {
                 { type: 'cobertura', subdir: '.', file: 'cobertura.xml' }
             ]
         },
-
-        junitReporter: {
-            outputFile: 'reports/coverage/junit.xml',
-            suit: ''
-        },
-
 
         // web server port
         port: 9876,
@@ -85,8 +97,8 @@ module.exports = function(config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: [
-            //'Chrome',
-            'PhantomJS'
+            'Chrome'
+            //'PhantomJS'
         ],
 
 

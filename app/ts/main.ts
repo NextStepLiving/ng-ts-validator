@@ -8,7 +8,8 @@ export class Main {
 
     public static run() {
         var core = new Core();
+        angular.module('core',[])
+            .controller('CoreController', Core);;
 
-        core.test();
     }
 }
