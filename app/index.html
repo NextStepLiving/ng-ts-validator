@@ -7,12 +7,11 @@
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
 </head>
-<body>
+<body ng-app="app" ng-strict-di ng-controller="ApplicationController as router">
 
+    <ng-viewport></ng-viewport>
     <script>
-        System.import('js/main').then(function (modules) {
-            modules.Main.run();
-        });
+        System.import('js/main').then(function () {});
     </script>
 
 </body>

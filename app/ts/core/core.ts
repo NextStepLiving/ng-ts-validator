@@ -1,14 +1,15 @@
 import _ from 'lodash';
 
+
 export class Core {
 
-    private testMessage :string;
+    private testMessage:string;
 
     constructor() {
         this.testMessage = 'If you see this log message, it worked!';
     }
 
-    public test(): void {
+    public test():void {
         console.log(this.testMessage);
     }
 }

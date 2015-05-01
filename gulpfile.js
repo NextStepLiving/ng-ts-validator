@@ -30,17 +30,33 @@ gulp.task('typescript', function () {
         .pipe(gulp.dest('app/js'));
 });
 
+gulp.task('copy-html', function () {
+
+    return gulp.src('app/ts/**/*.html')
+        .pipe(gulp.dest('app/js'));
+});
+
 gulp.task('typescript-watcher', function () {
     return $.watch('app/ts/**/*.ts', function () {
         gulp.start('typescript');
     });
 });
 
+gulp.task('html-watcher', function () {
+    return $.watch('app/ts/**/*.html', function () {
+        gulp.start('copy-html');
+    });
+});
+
+
+
 gulp.task('watch', [
     'typescript-watcher',
+    'html-watcher'
 ]);
 
 gulp.task('dev', [
     'typescript',
+    'copy-html',
     'watch'
 ]);

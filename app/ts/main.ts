@@ -1,16 +1,20 @@
 /**
  * Created by dpavao on 4/28/15.
  */
-import angular from 'angular';
-import { Core } from './core/core';
+console.log('main.ts was executed');
+import 'angular';
+import 'angular-new-router';
+import { ExampleController } from './example/example-controller';
+import { ApplicationController } from './application-controller';
+import applicationConfig from './application-config';
+import { addTodo } from './add-todo/add-todo';
 
-export class Main {
 
-    public static run() {
-        var core = new Core();
+var app = angular.module('app', ['ngNewRouter']);
 
-        angular.module('core',[])
-            .controller('CoreController', Core);
+app.config(applicationConfig);
+app.controller('ApplicationController', ApplicationController);
+app.controller('ExampleController', ExampleController);
 
-    }
-}
+app.directive('addTodo', addTodo);
+
