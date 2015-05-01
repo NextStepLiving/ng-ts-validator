@@ -16,6 +16,7 @@ System.config({
 System.config({
   "map": {
     "angular": "npm:angular@1.4.0-rc.1",
+    "angular-mocks": "npm:angular-mocks@1.4.0-rc.1",
     "babel": "npm:babel-core@5.1.13",
     "babel-runtime": "npm:babel-runtime@5.1.13",
     "core-js": "npm:core-js@0.9.4",
