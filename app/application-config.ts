@@ -11,7 +11,7 @@ function setControllerNameMapping($componentLoaderProvider) {
     $componentLoaderProvider.setTemplateMapping(function (name: string) {
 
         let dashName = dashCase(name);
-        return 'js/' + dashName + '/' + dashName + '.html';
+        return 'components/' + dashName + '/' + dashName + '.html';
     });
 }
 
