@@ -1,6 +1,14 @@
+import { Todo } from '../../models/todo';
 export class AddTodoController {
     constructor() {
-        this.derpSize = "Friggin Huge";
+        console.log('todoList', this.todoList);
+    }
+    newTodoSubmit() {
+        var todo = new Todo();
+        todo.title = this.newTodoTitle;
+        todo.completed = false;
+        this.todoList.push(todo);
+        this.newTodoTitle = null;
     }
 }
 

@@ -6,7 +6,7 @@ export class ApplicationController {
     }
     bindRoutes() {
         this.$router.config([
-            { path: '/', component: 'example' }
+            { path: '/', component: 'todo' }
         ]);
     }
 }

@@ -6,7 +6,9 @@ export let addTodo = function () {
         scope: {},
         controller: AddTodoController,
         controllerAs: 'vm',
-        bindToController: true
+        bindToController: {
+            todoList: '='
+        }
     };
 };
 
