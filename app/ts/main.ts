@@ -4,10 +4,10 @@
 console.log('main.ts was executed');
 import 'angular';
 import 'angular-new-router';
-import { ExampleController } from './example/example-controller';
+import { ExampleController } from './components/example/example-controller';
 import { ApplicationController } from './application-controller';
 import applicationConfig from './application-config';
-import { addTodo } from './add-todo/add-todo';
+import { addTodo } from './components/add-todo/add-todo';
 
 
 var app = angular.module('app', ['ngNewRouter']);
