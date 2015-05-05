@@ -30,14 +30,16 @@ module.exports = function(config) {
                 'app/jspm_packages/npm/babel-core@5.1.13/browser-polyfill.js',
                 'test/**/*-spec.js'
             ],
-            serveFiles: ['app/js/**/*.js'],
+            serveFiles: [
+                '.tmp/**/*.js',
+                'app/**/*'
+            ],
             config: 'app/config.js',
             packages: 'app/jspm_packages'
         },
 
         proxies: {
-            '/base/jspm_packages/': '/base/app/jspm_packages',
-            '/base/app/ts': '/base/app/js'
+            '/base/jspm_packages/': '/base/app/jspm_packages'
             //'/base/node_modules/karma-babel-preprocessor/node_modules/babel-core/': '/base/node_modules/babel/node_modules/babel-core/'
         },
 

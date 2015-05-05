@@ -8,13 +8,13 @@ import 'angular-new-router';
 /**
  * Routeable Components
  */
-import { ExampleController } from 'components/example/example-controller';
-import { TodoController } from 'components/todo/todo-controller';
+import { ExampleController } from './components/example/example-controller';
+import { TodoController } from './components/todo/todo-controller';
 
-import { addTodo } from 'components/add-todo/add-todo';
-import { todoList } from 'components/todo-list/todo-list';
-import { ApplicationController } from 'application-controller';
-import applicationConfig from 'application-config';
+import { addTodo } from './components/add-todo/add-todo';
+import { todoList } from './components/todo-list/todo-list';
+import { ApplicationController } from './application-controller';
+import applicationConfig from './application-config';
 
 
 
