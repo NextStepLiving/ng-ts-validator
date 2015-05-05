@@ -3,10 +3,13 @@ import { Todo } from '../../models/todo';
 export class AddTodoController {
 
 
+    /**
+     * bound with ng-model on the input field
+     */
     public newTodoTitle: string;
 
     /**
-     * This property is bound by bindToController in component definition
+     * bound by bindToController in component definition
      */
     public todoList: Array<Todo>;
 

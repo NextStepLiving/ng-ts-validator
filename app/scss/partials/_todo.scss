@@ -1,9 +1,20 @@
-.app-title {
-  font-size: 2.8rem;
-}
+.app-title { font-size: 2.8rem; }
 
 input.add-new-todo {
   font-size:2.0rem;
   padding: 8px 12px;
   width: 90%;
+}
+
+.todo-item {
+  font-size:1.8rem;
+  padding: 1.0rem 0;
+  border-bottom: 1px solid grey;
+
+  &:first-child { border-top: 1px solid grey; }
+  button { font-size: 1.3rem; }
+  span { margin:0 2.0rem; }
+  .remove-todo-btn { float: right; }
+  .mark-complete-btn { float: left; }
+  .completed { text-decoration: line-through; float:left; }
 }
