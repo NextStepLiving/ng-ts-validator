@@ -21,7 +21,7 @@ System.config({
     "babel": "npm:babel-core@5.1.13",
     "babel-runtime": "npm:babel-runtime@5.1.13",
     "core-js": "npm:core-js@0.9.4",
-    "lodash": "npm:lodash@3.7.0",
+    "lodash": "npm:lodash@3.8.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -125,6 +125,9 @@ System.config({
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:lodash@3.7.0": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:lodash@3.8.0": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:minimatch@2.0.7": {

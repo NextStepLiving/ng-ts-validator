@@ -8,7 +8,8 @@ export let todoList = function () {
         controller: TodoListController,
         controllerAs: 'vm',
         bindToController: {
-            todoList: '='
+            todoList: '=',
+            hideCompleted: '='
         }
     };
 };

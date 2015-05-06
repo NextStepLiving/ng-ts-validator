@@ -1,7 +1,6 @@
 /**
  * Created by dpavao on 4/28/15.
  */
-console.log('main.ts was executed');
 import 'angular';
 import 'angular-new-router';
 

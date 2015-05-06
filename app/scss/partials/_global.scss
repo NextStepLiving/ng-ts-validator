@@ -4,6 +4,24 @@ body {
   color: #4d4d4d;
 }
 
+a,
+button {
+  cursor: pointer !important;
+}
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
 #app-container {
   width: 70%;
   margin:0 auto;

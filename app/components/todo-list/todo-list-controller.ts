@@ -7,14 +7,13 @@ export class TodoListController {
      */
     public todoList: Array<Todo>;
 
-
     constructor() {}
 
     public removeTodo(index: number): void {
         this.todoList.splice(index, 1);
     }
 
-    public markComplete(index: number): void {
-        this.todoList[index].completed = true;
+    public toggleCompleteness(index: number): void {
+        this.todoList[index].completed = !this.todoList[index].completed;
     }
 }

@@ -3,6 +3,10 @@
 
     <add-todo todo-list="todo.todoList"></add-todo>
 
-    <todo-list todo-list="todo.todoList"></todo-list>
+    <todo-list todo-list="todo.todoList" hide-completed="todo.hideCompleted"></todo-list>
 
+    <div class="clearfix">
+        <span class="left">Total todos: {{todo.todoList.length}}</span>
+        <a class="right" ng-click="todo.hideCompleted = !todo.hideCompleted">Hide/Show Completed</a>
+    </div>
 </div>
