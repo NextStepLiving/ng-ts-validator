@@ -39,14 +39,10 @@
   
   ```
   
-  In a different terminal window start a static http server with the PROJECT_ROOT/app as the webroot
+  In a different terminal window start the supplied node server to run the project
   
   ```bash
-  # python simple http server
-  python -m SimpleHTTPServer 8080
-  
-  # or nodes http-server if you have it installed globally
-  http-server
+  node server/server.js
   ```
   
-  Open a browser window at http://localhost:8080, you'll see nothing :)
+  Open a browser window at http://localhost:8001
