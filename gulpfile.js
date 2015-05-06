@@ -9,9 +9,10 @@ var $ = require('gulp-load-plugins')({lazy: true});
 var tsProject = $.typescript.createProject({
     declarationFiles: true,
     noExternalResolve: true,
+    module: 'amd',
     typescript: require('typescript'),
     sourceRoot: '/app/',
-    target: 'ES6'
+    target: 'ES5'
 });
 
 
@@ -27,8 +28,8 @@ gulp.task('typescript', function () {
     return tsResult.js
         .pipe($.sourcemaps.write('./', {
             debug: true,
-            includeContent: false,
-            sourceMappingURLPrefix: '.'
+            includeContent: true,
+
         }))
         .pipe(gulp.dest('.tmp/'));
 });
