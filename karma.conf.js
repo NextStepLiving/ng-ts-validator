@@ -53,6 +53,8 @@ module.exports = function(config) {
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
             'app/js/**/*.js': ['babel'],
+            '.tmp/components/**/*.js': ['babel', 'coverage'],
+            '.tmp/models/*.js': ['babel', 'coverage'],
             'test/**/*.js': ['babel']
         },
 
