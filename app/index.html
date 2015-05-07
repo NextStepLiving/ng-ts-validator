@@ -5,15 +5,20 @@
     <title>Angular1.4 / TypeScript1.5 Starter</title>
     <link rel="stylesheet" href="styles/main.css" />
 
+    <!-- build:js -->
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
+    <!-- endbuild -->
 </head>
 <body ng-app="app" ng-strict-di ng-controller="ApplicationController as router">
 
     <ng-viewport></ng-viewport>
+
+    <!-- build:module-import -->
     <script>
         System.import('main');
     </script>
+    <!-- endbuild -->
 
 </body>
 </html>
