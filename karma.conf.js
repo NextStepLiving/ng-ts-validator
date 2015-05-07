@@ -22,7 +22,6 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-
         ],
 
         jspm: {
@@ -32,6 +31,8 @@ module.exports = function(config) {
             ],
             serveFiles: [
                 '.tmp/**/*.js',
+                '.tmp/**/*.js.map',
+                'app/**/*.js.map',
                 'app/**/*'
             ],
             config: 'app/config.js',
@@ -52,15 +53,14 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'app/js/**/*.js': ['babel'],
-            '.tmp/components/**/*.js': ['babel', 'coverage'],
-            '.tmp/models/*.js': ['babel', 'coverage'],
-            'test/**/*.js': ['babel']
+            '.tmp/components/**/*.js': ['coverage'],
+            '.tmp/models/*.js': ['coverage'],
+            'test/**/*-spec.js': ['babel']
         },
 
         babelPreprocessor: {
             options: {
-                optional: ['runtime'],
+                //optional: ['runtime'],
                 sourceMap: 'inline',
                 modules: 'system'
             }

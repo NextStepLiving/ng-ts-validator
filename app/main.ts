@@ -1,7 +1,7 @@
 /**
  * Created by dpavao on 4/28/15.
  */
-import 'requirejs-browser';
+
 import 'angular';
 import 'angular-new-router';
 
