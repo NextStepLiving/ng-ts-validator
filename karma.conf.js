@@ -26,13 +26,12 @@ module.exports = function(config) {
 
         jspm: {
             loadFiles: [
-                'app/jspm_packages/npm/babel-core@5.1.13/browser-polyfill.js',
+                '.tmp/main.js',
                 'test/**/*-spec.js'
             ],
             serveFiles: [
                 '.tmp/**/*.js',
                 '.tmp/**/*.js.map',
-                'app/**/*.js.map',
                 'app/**/*'
             ],
             config: 'config.js',
@@ -40,8 +39,6 @@ module.exports = function(config) {
         },
 
         proxies: {
-            '/base/jspm_packages/': '/base/app/jspm_packages'
-            //'/base/node_modules/karma-babel-preprocessor/node_modules/babel-core/': '/base/node_modules/babel/node_modules/babel-core/'
         },
 
 
@@ -60,7 +57,7 @@ module.exports = function(config) {
 
         babelPreprocessor: {
             options: {
-                //optional: ['runtime'],
+                optional: ['runtime'],
                 sourceMap: 'inline',
                 modules: 'system'
             }

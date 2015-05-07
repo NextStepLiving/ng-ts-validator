@@ -1,7 +1,7 @@
 
-import 'angular'
-import 'angular-mocks'
-import '.tmp/main'
+import 'angular';
+import 'angular-mocks';
+
 
 
 describe('an example test', function () {

@@ -2,6 +2,7 @@
  * Created by dpavao on 4/28/15.
  */
 var gulp = require('gulp');
+var jspm = require('jspm');
 var conf = require('./gulp.conf');
 var $ = require('gulp-load-plugins')({lazy: true});
 
@@ -63,6 +64,21 @@ gulp.task('dist-index-html', function () {
         .pipe(gulp.dest('dist'));
 });
 
+gulp.task('dist-js', function () {
+    jspm.bundleSFX('.tmp/main', 'dist/bundle.js', { mangle: false}).then(function () {
+        console.log('it went well');
+    }, function () {
+        console.log('it went poorly');
+    });
+
+});
+
+gulp.task('dist-templates', function () {
+
+    gulp.src('.tmp/templates.js')
+        .pipe(gulp.dest('dist'));
+})
+
 
 /**
  * Watcher Tasks
@@ -101,13 +117,13 @@ gulp.task('dev-no-watch', [
     'scss'
 ]);
 
-gulp.task('dev', [
-    'dev-no-watch',
-    'watch'
-]);
+gulp.task('dev', ['dev-no-watch'], function () {
+    gulp.start('watch');
+});
 
-gulp.task('build', [
-    'dev-no-watch',
-    'dist-index-html',
-    'dist-css'
-]);
+gulp.task('build', ['dev-no-watch'], function () {
+    gulp.start('dist-index-html');
+    gulp.start('dist-css');
+    gulp.start('dist-js');
+    gulp.start('dist-templates');
+});
