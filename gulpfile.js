@@ -42,10 +42,10 @@ gulp.task('scss', function () {
         .pipe(gulp.dest('.tmp/styles'));
 });
 
-gulp.task('copy-html', function () {
-
+gulp.task('templatecache', function () {
     return gulp.src(conf.src.html)
-        .pipe(gulp.dest('.tmp/'));
+        .pipe($.angularTemplatecache({standalone: true}))
+        .pipe(gulp.dest('.tmp'));
 });
 
 
@@ -66,7 +66,7 @@ gulp.task('scss-watcher', function () {
 
 gulp.task('html-watcher', function () {
     return $.watch(conf.src.html, function () {
-        gulp.start('copy-html');
+        gulp.start('templatecache');
     });
 });
 
@@ -80,9 +80,13 @@ gulp.task('watch', [
     'scss-watcher'
 ]);
 
-gulp.task('dev', [
+gulp.task('dev-no-watch', [
     'typescript',
-    'copy-html',
-    'scss',
+    'templatecache',
+    'scss'
+]);
+
+gulp.task('dev', [
+    'dev-no-watch',
     'watch'
 ]);

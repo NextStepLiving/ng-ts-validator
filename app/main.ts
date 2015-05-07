@@ -4,6 +4,8 @@
 
 import 'angular';
 import 'angular-new-router';
+import 'templates';
+
 
 /**
  * Routeable Components
@@ -18,7 +20,10 @@ import applicationConfig from './application-config';
 
 
 
-var app = angular.module('app', ['ngNewRouter']);
+var app = angular.module('app', [
+    'ngNewRouter',
+    'templates'
+]);
 
 app.config(applicationConfig);
 app.controller('ApplicationController', ApplicationController);
