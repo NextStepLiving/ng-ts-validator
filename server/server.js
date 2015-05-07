@@ -32,9 +32,10 @@ console.log('PORT=' + port);
 console.log('NODE_ENV=' + environment);
 
 switch (environment){
-    case 'build':
+    case 'prod':
+        port = 8002
         console.log('** BUILD **');
-        app.use(express.static('./build/'));
+        app.use(express.static('./dist/'));
         app.use(apiProxy);
         // Any invalid calls for templateUrls are under app/* and should return 404
         app.use('/app/*', function(req, res, next) {

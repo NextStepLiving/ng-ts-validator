@@ -35,8 +35,8 @@ module.exports = function(config) {
                 'app/**/*.js.map',
                 'app/**/*'
             ],
-            config: 'app/config.js',
-            packages: 'app/jspm_packages'
+            config: 'config.js',
+            packages: 'jspm_packages'
         },
 
         proxies: {
