@@ -58,19 +58,22 @@ gulp.task('templatecache', function () {
 gulp.task('dist-index-html', function () {
     return gulp.src('app/index.html')
         .pipe($.htmlReplace({
-            'js': 'bundle.js',
-            'module-import': ''
+            'js':'' ,
+            'module-import': 'bundle.js'
         }))
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('dist-js', function () {
-    jspm.bundleSFX('.tmp/main', 'dist/bundle.js', { mangle: false}).then(function () {
-        console.log('it went well');
-    }, function () {
-        console.log('it went poorly');
-    });
+gulp.task('dist-js', function (cb) {
 
+    jspm.bundleSFX('.tmp/main', 'dist/bundle.js', { mangle: false}).then(function () {
+        console.log('------>', 'JSPM bundled');
+    }, function () {
+        var err = new $.util.PluginError('JSPM', {
+            message: 'The jspm bundle failed'
+        });
+        cb(err);
+    });
 });
 
 gulp.task('dist-templates', function () {
