@@ -1,14 +1,14 @@
 import { AddTodoController } from './add-todo-controller';
 
-export let addTodo = function () {
+export let addTodo = function (): ng.IDirective {
     return {
         templateUrl: 'components/add-todo/add-todo.html',
         restrict: 'E',
-        scope: {},
+        scope: {
+            todoList: '='
+        },
         controller: AddTodoController,
         controllerAs: 'vm',
-        bindToController: {
-            todoList: '='
-        }
+        bindToController: true
     };
 };
