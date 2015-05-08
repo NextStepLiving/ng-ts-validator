@@ -1,4 +1,3 @@
-app/js
 jspm_packages
 dist
 .tmp
@@ -6,3 +5,4 @@ node_modules
 .idea
 reports
 npm-debug.log
+typings
