@@ -3,9 +3,11 @@
  */
 
 import 'angular';
+import 'angular-animate';
+import 'gsap';
+import 'Hendrixer/ngFx';
 import 'angular-new-router';
 import './templates';
-import { IModule } from 'angular';
 
 /**
  * Routeable Components
@@ -20,8 +22,7 @@ import applicationConfig from './application-config';
 
 
 
-var app: angular.IModule = angular.module('app', ['ngNewRouter', 'templates']);
-
+var app: ng.IModule = angular.module('app', ['ngNewRouter', 'templates', 'ngFx', 'ngAnimate']);
 
 app.config(applicationConfig);
 app.controller('ApplicationController', ApplicationController);

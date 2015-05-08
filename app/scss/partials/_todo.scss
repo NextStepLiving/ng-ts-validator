@@ -10,7 +10,7 @@ input.add-new-todo {
 
 .todo-item {
   font-size:1.8rem;
-  padding: 1.0rem 0;
+  padding: 1.0rem 1.0rem;
   border-bottom: 1px solid grey;
 
   &:first-child {
@@ -29,6 +29,7 @@ input.add-new-todo {
     border:none;
     color: rgb(189, 0, 0);
     background: rgb(245, 142, 142);
+    outline:none;
     float: right;
   }
   &.completed {

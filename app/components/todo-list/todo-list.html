@@ -1,7 +1,7 @@
 
 <h3>A List of Todos</h3>
 <ul class="unstyled">
-    <li ng-repeat="todo in vm.todoList" ng-if="!vm.hideCompleted || !todo.completed" class="todo-item" ng-class="{completed: todo.completed}">
+    <li ng-repeat="todo in vm.todoList" ng-if="!vm.hideCompleted || !todo.completed" class="todo-item fx-zoom-down fx-easing-back fx-speed-500" ng-class="{completed: todo.completed}">
 
         <span>{{todo.title}}</span>
         <button class="toggle-completeness-btn" type="button" ng-click="vm.toggleCompleteness($index)">Mark Complete</button>

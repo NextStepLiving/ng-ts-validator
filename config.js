@@ -14,13 +14,16 @@ System.config({
 
 System.config({
   "map": {
+    "Hendrixer/ngFx": "github:Hendrixer/ngFx@1.1.0",
     "angular": "npm:angular@1.4.0-rc.1",
+    "angular-animate": "npm:angular-animate@1.4.0-rc.1",
     "angular-mocks": "npm:angular-mocks@1.4.0-rc.1",
     "angular-new-router": "npm:angular-new-router@0.5.3",
     "babel": "npm:babel-core@5.2.17",
     "babel-core": "npm:babel-core@5.2.17",
     "babel-runtime": "npm:babel-runtime@5.1.13",
     "core-js": "npm:core-js@0.9.7",
+    "gsap": "npm:gsap@1.16.1",
     "lodash": "npm:lodash@3.8.0",
     "requirejs-browser": "npm:requirejs-browser@2.1.9",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -116,6 +119,9 @@ System.config({
     },
     "npm:graceful-readlink@1.0.1": {
       "fs": "github:jspm/nodelibs-fs@0.1.2"
+    },
+    "npm:gsap@1.16.1": {
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:inflight@1.0.4": {
       "once": "npm:once@1.3.2",

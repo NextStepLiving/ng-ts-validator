@@ -29,8 +29,7 @@ gulp.task('typescript', function () {
     return tsResult.js
         .pipe($.sourcemaps.write('./', {
             debug: true,
-            includeContent: true,
-
+            includeContent: true
         }))
         .pipe(gulp.dest('.tmp/'));
 });
