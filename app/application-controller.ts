@@ -12,7 +12,7 @@ export class ApplicationController {
 
     private bindRoutes(): void {
         this.$router.config([
-            { path: '/', component: 'todo' }
+            { path: '/', component: 'example' }
         ]);
     }
 }

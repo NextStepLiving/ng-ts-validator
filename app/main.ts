@@ -4,8 +4,6 @@
 
 import 'angular';
 import 'angular-animate';
-import 'gsap';
-import 'Hendrixer/ngFx';
 import 'angular-new-router';
 import './templates';
 
@@ -22,7 +20,7 @@ import applicationConfig from './application-config';
 
 
 
-var app: ng.IModule = angular.module('app', ['ngNewRouter', 'templates', 'ngFx', 'ngAnimate']);
+var app: ng.IModule = angular.module('app', ['ngNewRouter', 'templates', 'ngAnimate']);
 
 app.config(applicationConfig);
 app.controller('ApplicationController', ApplicationController);
