@@ -1,19 +1,12 @@
-
+import { TestModel } from './models/test-model';
 
 export class ApplicationController {
-    public static $inject = ['$router'];
-    private $router;
 
-    constructor($router) {
-        console.log('ApplicationController instatiated');
-        this.$router = $router;
-        this.bindRoutes();
-    }
+    public testModel: TestModel;
 
-    private bindRoutes(): void {
-        this.$router.config([
-            { path: '/', component: 'example' }
-        ]);
+    constructor() {
+        var testModel = new TestModel();
+        testModel.testProperty = 'foo bar';
+        this.testModel = testModel;
     }
 }
-

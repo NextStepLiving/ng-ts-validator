@@ -10,7 +10,11 @@
     <script src="config.js"></script>
     <!-- endbuild -->
 </head>
-<body ng-app="app" ng-strict-di ng-controller="ApplicationController as router">
+<body ng-app="app" ng-strict-di ng-controller="ApplicationController as appCtrl">
+
+    <form name="appCtrl.testForm">
+        <input name= "testProperty" type="text" ng-model="appCtrl.testModel.testProperty" />
+    </form>
 
     <ng-viewport></ng-viewport>
 

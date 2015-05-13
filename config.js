@@ -14,16 +14,27 @@ System.config({
 
 System.config({
   "map": {
-    "angular": "npm:angular@1.4.0-rc.1",
-    "angular-animate": "npm:angular-animate@1.4.0-rc.1",
-    "angular-mocks": "npm:angular-mocks@1.4.0-rc.1",
+    "angular": "npm:angular@1.4.0-rc.2",
+    "angular-animate": "npm:angular-animate@1.4.0-rc.2",
+    "angular-mocks": "npm:angular-mocks@1.4.0-rc.2",
     "angular-new-router": "npm:angular-new-router@0.5.3",
-    "babel": "npm:babel-core@5.2.17",
-    "babel-core": "npm:babel-core@5.2.17",
+    "babel": "npm:babel-core@5.3.1",
+    "babel-core": "npm:babel-core@5.3.1",
     "babel-runtime": "npm:babel-runtime@5.1.13",
     "core-js": "npm:core-js@0.9.7",
     "lodash": "npm:lodash@3.8.0",
     "requirejs-browser": "npm:requirejs-browser@2.1.9",
+    "ts-validator": "github:NextStepLiving/ts-validator@0.1.0",
+    "github:NextStepLiving/ts-validator@0.1.0": {
+      "angular": "npm:angular@1.4.0-rc.2",
+      "angular-animate": "npm:angular-animate@1.4.0-rc.2",
+      "angular-mocks": "npm:angular-mocks@1.4.0-rc.2",
+      "angular-new-router": "npm:angular-new-router@0.5.3",
+      "babel": "npm:babel-core@5.3.1",
+      "babel-core": "npm:babel-core@5.3.1",
+      "lodash": "npm:lodash@3.8.0",
+      "requirejs-browser": "npm:requirejs-browser@2.1.9"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -59,7 +70,7 @@ System.config({
       "systemjs-json": "github:systemjs/plugin-json@0.1.0",
       "traceur": "npm:traceur@0.0.72"
     },
-    "npm:angular@1.4.0-rc.1": {
+    "npm:angular@1.4.0-rc.2": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:assert@1.3.0": {
