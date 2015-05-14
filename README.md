@@ -1,3 +1,3 @@
-# An Angular wrapper to provide error messages from ts-validator (https://github.com/NextStepLiving/ts-validator)
+### An Angular wrapper to provide error messages from ts-validator (https://github.com/NextStepLiving/ts-validator)
 
 More to come soon...
