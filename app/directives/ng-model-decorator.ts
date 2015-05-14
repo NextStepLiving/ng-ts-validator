@@ -24,12 +24,11 @@ export let ngModelDecorator = function ($provide) {
 
                     model._validators[name].forEach(function (validatorObj:IValidatorObject) {
 
-                        ngModelController.$validators[validatorObj.name] = validatorObj.validate;
+                        ngModelController.$validators[validatorObj.name] = validatorObj.validate.bind(validatorObj);
 
                         let formControllerName: string = ngFormController.$name;
                         let modelControllerName: string = ngModelController.$name;
 
-                        element.after($compile(`<div ng-show="(${formControllerName}.$dirty || ${formControllerName}.$submitted) && ${formControllerName}.${modelControllerName}.$invalid">${model._errorMessages[name][validatorObj.name]}</div>`)(scope));
                     });
                 }
 

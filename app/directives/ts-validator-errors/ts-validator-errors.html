@@ -1,0 +1,6 @@
+<div ng-show="vm.forForm.$invalid && vm.forForm.$dirty">
+    <div ng-repeat="(errorName, errorMessage) in vm.forModel._errorMessages[vm.forField]" ng-show="vm.forError[errorName] == true">
+        {{errorMessage}}
+    </div>
+</div>
+

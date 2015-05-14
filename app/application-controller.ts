@@ -5,8 +5,6 @@ export class ApplicationController {
     public testModel: TestModel;
 
     constructor() {
-        var testModel = new TestModel();
-        testModel.testProperty = 'foo bar';
-        this.testModel = testModel;
+        this.testModel = new TestModel();
     }
 }

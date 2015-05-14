@@ -10,11 +10,16 @@
     <script src="config.js"></script>
     <!-- endbuild -->
 </head>
-<body ng-app="app" ng-strict-di ng-controller="ApplicationController as appCtrl">
+<body ng-app="ng-ts-validator" ng-strict-di ng-controller="ApplicationController as appCtrl">
+
+
 
     <form name="appCtrl.testForm">
-        <input name= "testProperty" type="text" ng-model="appCtrl.testModel.testProperty" />
+        <input name="testProperty" type="text" ng-model="appCtrl.testModel.testProperty" />
+        <ts-validator-errors for-error="appCtrl.testForm.testProperty.$error" for-model="appCtrl.testModel" for-field="testProperty"></ts-validator-errors>
     </form>
+
+
 
     <ng-viewport></ng-viewport>
 
