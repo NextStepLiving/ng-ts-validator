@@ -47,7 +47,7 @@ export class Person extends BaseModel {
     
 }
 ```
-For more information on available decorators in TypeScript Validator see https://github.com:NextStepLiving/ts-validator
+For more information on available decorators in TypeScript Validator see https://github.com/NextStepLiving/ts-validator
 
 Define your controller with an instance of your model on the scope. With controller as syntax it would look like
 ```typescript
