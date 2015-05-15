@@ -1,4 +1,4 @@
-import 'app/main';
+import './app/main';
 export { BaseModel } from './app/libs/ts-validator/ts-validator';
 export { IValidatorObject } from './app/libs/ts-validator/ts-validator';
 
