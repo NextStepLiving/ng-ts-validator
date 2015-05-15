@@ -13,6 +13,8 @@ import { ApplicationController } from './application-controller';
 import { ngModelDecorator } from './directives/ng-model-decorator';
 import { tsValidatorErrors } from './directives/ts-validator-errors/ts-validator-errors';
 
+export { BaseModel } from './libs/ts-validator/ts-validator';
+
 
 
 var app: ng.IModule = angular.module('ng-ts-validator', []);
