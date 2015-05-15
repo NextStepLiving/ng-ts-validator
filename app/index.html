@@ -15,8 +15,19 @@
 
 
     <form name="appCtrl.testForm" ng-submit="appCtrl.onSubmit()">
-        <input name="testProperty" type="text" ng-model="appCtrl.testModel.testProperty" />
-        <ts-validator-errors for-error="appCtrl.testForm.testProperty.$error" for-model="appCtrl.testModel" for-field="testProperty"></ts-validator-errors>
+        <div>
+            <h3>Test Property</h3>
+            <input name="testProperty" type="text" ng-model="appCtrl.testModel.testProperty" />
+            <ts-validator-errors for-error="appCtrl.testForm.testProperty.$error" for-model="appCtrl.testModel" for-field="testProperty"></ts-validator-errors>
+        </div>
+        <div>
+            <h3>Test Property 2</h3>
+            <input name="testProperty2" type="text" ng-model="appCtrl.testModel.testProperty2" />
+            <ts-validator-errors for-error="appCtrl.testForm.testProperty2.$error" for-model="appCtrl.testModel" for-field="testProperty2"></ts-validator-errors>
+
+        </div>
+
+        <button class="ng-hide" type="submit">Submit</button>
     </form>
 
 
