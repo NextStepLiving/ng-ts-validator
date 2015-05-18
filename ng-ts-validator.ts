@@ -1,5 +1,6 @@
 import './app/main';
 export { BaseModel } from './app/libs/ts-validator/ts-validator';
+export { IConfig } from './app/libs/ts-validator/ts-validator';
 export { IValidatorObject } from './app/libs/ts-validator/ts-validator';
 
 export { notEmpty } from './app/libs/ts-validator/ts-validator';
