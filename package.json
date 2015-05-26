@@ -9,8 +9,7 @@
             "babel": "npm:babel-core@^5.1.13",
             "babel-core": "npm:babel-core@^5.1.13",
             "lodash": "npm:lodash@^3.8.0",
-            "requirejs-browser": "npm:requirejs-browser@^2.1.9",
-            "ts-validator": "github:NextStepLiving/ts-validator@^0.1.0"
+            "requirejs-browser": "npm:requirejs-browser@^2.1.9"
         },
         "devDependencies": {
             "babel": "npm:babel-core@^5.1.13",
