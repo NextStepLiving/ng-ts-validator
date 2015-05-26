@@ -54,4 +54,12 @@ describe('validator errors', function () {
         expect(container.element(by.css('.ts-validator-error-for-pattern')).isDisplayed()).to.eventually.be.true;
     });
 
+    it ('should only show one error if only one fails', function () {
+        testPage.findTestProperty3Input().sendKeys('2');
+
+        var container = $('.ts-validator-error-for-testProperty3');
+        expect(container.element(by.css('.ts-validator-error-for-max')).isDisplayed()).to.eventually.be.false;
+        expect(container.element(by.css('.ts-validator-error-for-pattern')).isDisplayed()).to.eventually.be.true;
+    });
+
 });

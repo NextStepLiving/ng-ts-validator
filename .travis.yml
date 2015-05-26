@@ -4,13 +4,12 @@ node_js:
 
 before_install:
 
-
-after_install:
-  - npm start
-
 install:
   - npm install
   - node_modules/protractor/bin/webdriver-manager update --standalone
+
+after_install:
+  - npm start
 
 before_script:
   - "export DISPLAY=:99.0"
