@@ -13,6 +13,7 @@ after_install:
 script:
   - node_modules/.bin/jspm install
   - node_modules/gulp/bin/gulp.js dev-no-watch
+  - node_modules/protractor/bin/webdriver-manager update --standalone
   - node_modules/protractor/bin/webdriver-manager start
   - node_modules/protractor/bin/protractor protractor.conf.js
 
