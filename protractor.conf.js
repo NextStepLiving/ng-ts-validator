@@ -3,9 +3,12 @@ exports.config = {
     specs: [
         'test/e2e/**/*-spec.js'
     ],
+    capabilities: {
+        browserName: 'firefox'
+    },
     framework: 'mocha',
     mochaOpts: {
-        reporter: 'list'
+        reporter: 'spec'
     }
 
 

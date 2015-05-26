@@ -27,6 +27,16 @@ describe('protractor tests', function () {
         expect(testPage.findTestProperty2Input().getAttribute('id')).to.eventually.equal('test-property-2');
     });
 
+
+});
+
+describe('validator errors', function () {
+    var testPage;
+
+    beforeEach(function () {
+        testPage = new TestPage();
+    });
+
     it ('should show error messages when the form is submitted with empty text values', function () {
 
         testPage.submitForm();
@@ -43,9 +53,5 @@ describe('protractor tests', function () {
         expect(container.element(by.css('.ts-validator-error-for-max')).isDisplayed()).to.eventually.be.true;
         expect(container.element(by.css('.ts-validator-error-for-pattern')).isDisplayed()).to.eventually.be.true;
     });
-
-
-
-
 
 });
