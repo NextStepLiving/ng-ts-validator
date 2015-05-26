@@ -27,7 +27,7 @@ module.exports = function(config) {
         jspm: {
             loadFiles: [
                 '.tmp/main.js',
-                'test/**/*-spec.js'
+                'test/unit/**/*-spec.js',
             ],
             serveFiles: [
                 '.tmp/**/*.js',
@@ -52,7 +52,7 @@ module.exports = function(config) {
         preprocessors: {
             '.tmp/components/**/*.js': ['coverage'],
             '.tmp/models/*.js': ['coverage'],
-            'test/**/*-spec.js': ['babel']
+            'test/unit/**/*-spec.js': ['babel']
         },
 
         babelPreprocessor: {
@@ -99,7 +99,7 @@ module.exports = function(config) {
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: [
             //'Chrome'
-            'PhantomJS'
+             'PhantomJS'
         ],
 
 

@@ -2,7 +2,7 @@ import { TsValidatorErrorsController } from './ts-validator-errors-controller';
 import { tsValidatorErrorsTemplate } from './ts-validator-errors-template';
 import { linkFn } from './ts-validator-errors-link-fn';
 
-console.log('tsValidatorErrorsTemplate', tsValidatorErrorsTemplate());
+
 
 export let tsValidatorErrors = function (): ng.IDirective {
     return {
@@ -18,6 +18,5 @@ export let tsValidatorErrors = function (): ng.IDirective {
         controllerAs: 'vm',
         bindToController: true,
         template: tsValidatorErrorsTemplate()
-        //templateUrl: 'directives/ts-validator-errors/ts-validator-errors.html'
     }
 };

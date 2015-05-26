@@ -1,9 +1,12 @@
-import { IValidatorObject } from './libs/ts-validator/ts-validator';
+import { IValidatorObject } from '../libs/ts-validator/ts-validator';
+
 
 export let ngModelDecorator = function ($provide) {
 
-    var ngModelDirective = function ($delegate, $compile) {
+    var ngModelDirective = function ($delegate: Array<any>, $compile) {
+        // var directive: ng.IDirective = $delegate[0];
         var directive: ng.IDirective = $delegate[0];
+
         var origCompile: ng.IDirectiveCompileFn = directive.compile;
 
         directive.compile = function (element: ng.IAugmentedJQuery) {
@@ -19,6 +22,9 @@ export let ngModelDecorator = function ($provide) {
                 var model = scope.$eval(modelStr);
                 var ngModelController: ng.INgModelController = ctrls[0];
                 var ngFormController: ng.IFormController = ctrls[1];
+
+
+
 
                 if (typeof model._validators !== 'undefined' && typeof model._validators[name] !== 'undefined') {
 
