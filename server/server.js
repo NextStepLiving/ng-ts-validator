@@ -61,7 +61,7 @@ switch (environment){
         break;
 }
 
-app.listen(port, function() {
+app.listen(port, '127.0.0.1', 511, function() {
     console.log('Express server listening on port ' + port);
     console.log('env = ' + app.get('env') +
         '\n__dirname = ' + __dirname  +
