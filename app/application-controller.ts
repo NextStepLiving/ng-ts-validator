@@ -3,7 +3,7 @@ import { TestModel } from './models/test-model';
 export class ApplicationController {
 
     public testModel: TestModel;
-    public testForm: ng.IFormController;
+    public testForm;
 
     constructor() {
         this.testModel = new TestModel();
