@@ -1,4 +1,4 @@
-# Angular TypeScript Validator
+# Angular TypeScript Validator [![Build Status](https://travis-ci.org/NextStepLiving/ng-ts-validator.svg?branch=master)](https://travis-ci.org/NextStepLiving/ts-validator)
 
 This project is an Angular 1.x wrapper for TypeScript Validator (https://github.com/NextStepLiving/ts-validator)
 
