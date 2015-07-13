@@ -72,17 +72,17 @@ Add your person model properties to a form in your Angular template.
     <form name="vm.personForm">
         <div>
             <input name="firstName" type="text" ng-model="vm.personModel.firstName" />
-            <ts-validator-errors for-error="vm.personForm.firstName.$errors" for-model="vm.personModel" for-field="firstName"></ts-validator-errors>
+            <ts-validator-errors for-error="vm.personForm.firstName.$error" for-model="vm.personModel" for-field="firstName"></ts-validator-errors>
         </div>
 
         <div>
             <input name="lastName" type="text" ng-model="vm.personModel.lastName" />
-            <ts-validator-errors for-error="vm.personForm.lastName.$errors" for-model="vm.personModel" for-field="lastName"></ts-validator-errors>
+            <ts-validator-errors for-error="vm.personForm.lastName.$error" for-model="vm.personModel" for-field="lastName"></ts-validator-errors>
         </div>
 
         <div>
             <input name="age" type="text" ng-model="vm.personModel.age" />
-            <ts-validator-errors for-error="vm.personForm.age.$errors" for-model="vm.personModel" for-field="age"></ts-validator-errors>
+            <ts-validator-errors for-error="vm.personForm.age.$error" for-model="vm.personModel" for-field="age"></ts-validator-errors>
         </div>
     </form>
 </div>
