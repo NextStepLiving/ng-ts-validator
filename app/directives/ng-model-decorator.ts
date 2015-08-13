@@ -29,6 +29,9 @@ export let ngModelDecorator = function ($provide) {
                 if (typeof model._validators !== 'undefined' && typeof model._validators[name] !== 'undefined') {
 
                     model._validators[name].forEach(function (validatorObj:IValidatorObject) {
+                        validatorObj.ngModelController = ngModelController;
+                        validatorObj.ngFormController = ngFormController;
+                        validatorObj.model = model;
 
                         ngModelController.$validators[validatorObj.name] = validatorObj.validate.bind(validatorObj);
 
