@@ -3,5 +3,10 @@
 
 
 export let linkFn = function (scope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes, formController: ng.IFormController) {
+
     scope.vm.forForm = formController;
+
+    scope.vm.repositionErrors = function () {
+        element.css('top', element.parent().height());
+    };
 };
