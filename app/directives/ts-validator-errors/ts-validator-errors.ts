@@ -9,7 +9,7 @@ export let tsValidatorErrors = function (): ng.IDirective {
         restrict: 'E',
         require: '^form',
         scope: {
-            forError: '=',
+            forError: '@',
             forModel: '=',
             forField: '@'
         },
@@ -18,5 +18,6 @@ export let tsValidatorErrors = function (): ng.IDirective {
         controllerAs: 'vm',
         bindToController: true,
         template: tsValidatorErrorsTemplate()
+
     }
 };

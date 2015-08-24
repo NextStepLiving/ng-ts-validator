@@ -2,8 +2,9 @@
 
 
 
-export let linkFn = function (scope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes, formController: ng.IFormController) {
+export let linkFn = function (scope, element: ng.IAugmentedJQuery, attrs, formController: ng.IFormController) {
 
+    scope.vm.forError = scope.$parent.$eval(scope.vm.forError);
     scope.vm.forForm = formController;
 
     scope.vm.repositionErrors = function () {
