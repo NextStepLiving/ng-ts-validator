@@ -3,7 +3,10 @@
 
 
 export let linkFn = function (scope, element: ng.IAugmentedJQuery, attrs, formController: ng.IFormController) {
-
+    element.css('display', 'none');
+    setTimeout(function () {
+        element.css('display', 'block');
+    }, 200);
     scope.vm.forError = scope.$parent.$eval(scope.vm.forError);
     scope.vm.forForm = formController;
 
