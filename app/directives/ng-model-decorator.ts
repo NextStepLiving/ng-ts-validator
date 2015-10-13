@@ -28,17 +28,19 @@ export let ngModelDecorator = function ($provide) {
 
                 if (typeof model._validators !== 'undefined' && typeof model._validators[name] !== 'undefined') {
 
-                    model._validators[name].forEach(function (validatorObj:IValidatorObject) {
-                        validatorObj.ngModelController = ngModelController;
-                        validatorObj.ngFormController = ngFormController;
-                        validatorObj.model = model;
+                    attachValidatorToNgModelController(model, name, ngModelController, ngFormController);
 
-                        ngModelController.$validators[validatorObj.name] = validatorObj.validate.bind(validatorObj);
+                    if (typeof model._discriminator !== 'undefined') {
 
-                        let formControllerName: string = ngFormController.$name;
-                        let modelControllerName: string = ngModelController.$name;
+                        var removeListener = scope.$watch(`${modelStr}.${model._discriminator}`, function (newValue, oldValue) {
+                            if (typeof newValue !== 'undefined') {
+                                ngModelController.$validators = {};
 
-                    });
+                                attachValidatorToNgModelController(model, name, ngModelController, ngFormController);
+                            }
+                        });
+                        scope.$on('$destroy', removeListener);
+                    }
                 }
 
             };
@@ -56,3 +58,15 @@ export let ngModelDecorator = function ($provide) {
 };
 
 ngModelDecorator.$inject = ['$provide'];
+
+
+function attachValidatorToNgModelController(model, name, ngModelController, ngFormController) {
+    model._validators[name].forEach(function (validatorObj: IValidatorObject) {
+
+        validatorObj.ngModelController = ngModelController;
+        validatorObj.ngFormController = ngFormController;
+        validatorObj.model = model;
+
+        ngModelController.$validators[validatorObj.name] = validatorObj.validate.bind(validatorObj);
+    });
+}
